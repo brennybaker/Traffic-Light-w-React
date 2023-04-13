@@ -1,24 +1,22 @@
 import React from "react";
 import {useState} from "react"
 
-
-
-	
 //create your first component
 
 const TrafficLight = (props) => {
 	let colors=["redlit","yellowlit","greenlit"];
 
 	const [trafficColor, setTrafficColor] = useState(null);
+	const [isActive, setActive] = useState(false);
 
 	const redClick=()=>{
-		setTrafficColor("redlit")
+		setTrafficColor("redlit");setActive(true);
 	}	
 	const yellowClick=()=>{
-		setTrafficColor ("yellowlit")
+		setTrafficColor ("yellowlit");setActive(true);
 	}
 	const greenClick=()=>{
-		setTrafficColor("greenlit");
+		setTrafficColor("greenlit");setActive(true);
 	}
 	return (
 			<><div className="hanger"></div>
