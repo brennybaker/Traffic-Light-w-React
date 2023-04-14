@@ -21,21 +21,21 @@ const TrafficLight = () => {
 		
 		purpleLight.classList.add("purpleLight")
 		bigBox.appendChild(purpleLight)
-		extraArea.appendChild(extraArea)
 	}
 
 	return (
 			<><div className="hanger"></div>
-			<div className="bigBox">
-				<div className={"redLight " + (trafficColor=="red"?"redGlow":"")} onClick ={()=>setTrafficColor("red")}>
-				</div>
-				<div className={"yellowLight " + (trafficColor=="yellow"?"yellowGlow":"")}onClick={()=>setTrafficColor("yellow")}>
-				</div>
-				<div className={"greenLight " + (trafficColor=="green"?"greenGlow":"")}onClick={()=>setTrafficColor("green")}>
-				</div>
-				<button onClick={(e)=>handleClick(e)}>Cycle</button>
-				<button onClick={(e)=>addPurple(e)}>Add Purple</button>
-			</div></>
+				<div className="bigBox">
+					<div className={"redLight " + (trafficColor=="red"?"redGlow":"")} onClick ={()=>setTrafficColor("red")}>
+					</div>
+					<div className={"yellowLight " + (trafficColor=="yellow"?"yellowGlow":"")}onClick={()=>setTrafficColor("yellow")}>
+					</div>
+					<div className={"greenLight " + (trafficColor=="green"?"greenGlow":"")}onClick={()=>setTrafficColor("green")}>
+					</div>
+					<br></br>
+					<button onClick={(e)=>handleClick(e)}>Cycle</button>
+					<button onClick={(e)=>addPurple(e)}>Add Purple</button>
+				</div></>
 	);
 };
 
