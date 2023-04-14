@@ -1,32 +1,40 @@
 import React from "react";
-import {useState} from "react"
+import {useState} from "react";
 
 //create your first component
 
-const TrafficLight = (props) => {
-	let colors=["redlit","yellowlit","greenlit"];
+const TrafficLight = () => {
 
-	const [trafficColor, setTrafficColor] = useState(null);
-	const [isActive, setActive] = useState(false);
+	const [trafficColor, setTrafficColor] = useState("");
+	const handleClick = (e)=>{
+		e.preventDefault();
+		setTimeout(()=>setTrafficColor("red"),1000);
+		setTimeout(()=>setTrafficColor("yellow"),2000);
+		setTimeout(()=>setTrafficColor("green"),3000);
+		setTimeout(()=>setTrafficColor(""),4000);
+	}
 
-	const redClick=()=>{
-		setTrafficColor("redlit");setActive(true);
-	}	
-	const yellowClick=()=>{
-		setTrafficColor ("yellowlit");setActive(true);
+	const addPurple = (e) =>{
+		e.preventDefault();
+		let bigBox = document.querySelector(".bigBox")
+		let purpleLight= document.createElement("div")
+		
+		purpleLight.classList.add("purpleLight")
+		bigBox.appendChild(purpleLight)
+		extraArea.appendChild(extraArea)
 	}
-	const greenClick=()=>{
-		setTrafficColor("greenlit");setActive(true);
-	}
+
 	return (
 			<><div className="hanger"></div>
 			<div className="bigBox">
-				<div className="redLight" onClick ={redClick}>{trafficColor}
+				<div className={"redLight " + (trafficColor=="red"?"redGlow":"")} onClick ={()=>setTrafficColor("red")}>
 				</div>
-				<div className="yellowLight" onClick={yellowClick}>{trafficColor}
+				<div className={"yellowLight " + (trafficColor=="yellow"?"yellowGlow":"")}onClick={()=>setTrafficColor("yellow")}>
 				</div>
-				<div className="greenLight" onClick={greenClick}>{trafficColor}
+				<div className={"greenLight " + (trafficColor=="green"?"greenGlow":"")}onClick={()=>setTrafficColor("green")}>
 				</div>
+				<button onClick={(e)=>handleClick(e)}>Cycle</button>
+				<button onClick={(e)=>addPurple(e)}>Add Purple</button>
 			</div></>
 	);
 };

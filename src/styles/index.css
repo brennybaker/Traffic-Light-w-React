@@ -49,3 +49,34 @@
     padding: 5%;
     margin-top:5%;
 }
+
+.purpleLight{
+    position:flex;
+    margin: auto;
+    height:10rem;
+    width:10rem;
+    background-color: purple;
+    border-radius: 50%;
+    top: 5rem;
+    padding: 5%;
+    margin-top:5%;
+}
+
+.redGlow{
+    box-shadow: 0px 0px 15px 15px red;
+}
+
+.yellowGlow{
+    box-shadow: 0px 0px 15px 15px yellow;
+}
+
+.greenGlow{
+    box-shadow: 0px 0px 15px 15px green;
+}
+
+.extraArea{
+    height: 10rem;
+    width: 20rem;
+    background-color: black;
+    border-radius: 20%;
+}
