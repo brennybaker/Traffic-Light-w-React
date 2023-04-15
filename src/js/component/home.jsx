@@ -7,21 +7,16 @@ const TrafficLight = () => {
 
 	const [trafficColor, setTrafficColor] = useState("");
 	const handleClick = (e)=>{
-		e.preventDefault();
 		setTimeout(()=>setTrafficColor("red"),1000);
 		setTimeout(()=>setTrafficColor("yellow"),2000);
 		setTimeout(()=>setTrafficColor("green"),3000);
-		setTimeout(()=>setTrafficColor(""),4000);
+		setTimeout(()=>setTrafficColor("purple"),4000);
+		setTimeout(()=>setTrafficColor(""),5000);
 	}
 
-	const addPurple = (e) =>{
-		e.preventDefault();
-		let bigBox = document.querySelector(".bigBox")
-		let purpleLight= document.createElement("div")
-		
-		purpleLight.classList.add("purpleLight")
-		bigBox.appendChild(purpleLight)
-	}
+	const[buttonStatus,setButtonStatus] = useState(false);
+
+
 
 	return (
 			<><div className="hanger"></div>
@@ -32,9 +27,11 @@ const TrafficLight = () => {
 					</div>
 					<div className={"greenLight " + (trafficColor=="green"?"greenGlow":"")}onClick={()=>setTrafficColor("green")}>
 					</div>
+					{buttonStatus && <div className={"purpleLight " + (trafficColor=="purple"?"purpleGlow":"")}onClick={()=>setTrafficColor("purple")}>
+					</div>}
 					<br></br>
 					<button onClick={(e)=>handleClick(e)}>Cycle</button>
-					<button onClick={(e)=>addPurple(e)}>Add Purple</button>
+					<button onClick={()=>setButtonStatus(!buttonStatus)}>Add Purple</button>
 				</div></>
 	);
 };

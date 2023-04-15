@@ -10,7 +10,7 @@
 
 .bigBox{
     margin: auto;
-    height: 40rem;
+    height: auto;
     width:20rem;
     background-color:black;
     padding:5rem;
@@ -24,6 +24,7 @@
     width:10rem;
     background-color: red;
     border-radius: 50%;
+    margin-bottom: 2rem;
 }
 
 .yellowLight{
@@ -33,9 +34,9 @@
     width:10rem;
     background-color: yellow;
     border-radius: 50%;
-    top: 5rem;
     padding: 10%;
-    margin-top:5%;
+    margin-top:8%;
+    margin-bottom:2rem;
 }
 
 .greenLight{
@@ -45,9 +46,8 @@
     width:10rem;
     background-color: green;
     border-radius: 50%;
-    top: 5rem;
     padding: 10%;
-    margin-top:5%;
+    margin-top:8%;
 }
 
 .purpleLight{
@@ -57,9 +57,8 @@
     width:10rem;
     background-color: purple;
     border-radius: 50%;
-    top: 5rem;
     padding: 10%;
-    margin-top:5%;
+    margin-top:2rem;
 }
 
 .redGlow{
@@ -74,9 +73,6 @@
     box-shadow: 0px 0px 15px 15px green;
 }
 
-.extraArea{
-    height: 10rem;
-    width: 20rem;
-    background-color: black;
-    border-radius: 20%;
+.purpleGlow{
+    box-shadow: 0px 0px 15px 15px purple;
 }
