@@ -1,8 +1,6 @@
 import React from "react";
 import {useState} from "react";
 
-//create your first component
-
 const TrafficLight = () => {
 
 	const [trafficColor, setTrafficColor] = useState("");
@@ -31,7 +29,9 @@ const TrafficLight = () => {
 					</div>}
 					<br></br>
 					<button onClick={(e)=>handleClick(e)}>Cycle</button>
-					<button onClick={()=>setButtonStatus(!buttonStatus)}>Add Purple</button>
+					<button onClick={toggleButton}>
+						{buttonStatus ? "Remove Purple" : "Add Purple"}
+					</button>
 				</div></>
 	);
 };
